@@ -1,0 +1,15 @@
+{
+    "name": "pascallacroix/book_hunter_poo_2026",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pascal Lacroix",
+            "email": "p.lacroix@promotion-sociale.be"
+        }
+    ],
+    "require": {}
+}
