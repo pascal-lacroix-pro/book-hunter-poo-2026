@@ -15,6 +15,6 @@ abstract class BooksManager
         $rs = $connexion->prepare($sql);
         $rs->bindValue(':limit', $limit, PDO::PARAM_INT);
         $rs->execute();
-        return $rs->fetchAll(PDO::FETCH_ASSOC);
+        return $rs->fetchAll(PDO::FETCH_CLASS, Book::class);
     }
 }
