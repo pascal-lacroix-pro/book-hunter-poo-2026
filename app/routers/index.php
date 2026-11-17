@@ -1,4 +1,4 @@
 <?php
 
 
-\App\Controllers\PagesController::homeAction($connexion);
+\App\Controllers\PagesController::homeAction();
