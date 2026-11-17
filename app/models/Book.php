@@ -6,7 +6,7 @@ class Book
 {
 
     // Champs natifs
-    public $id, $title, $publicated_at, $resume, $cover, $isbn, $author_id, $category_id, $created_at, $notation;
+    private $id, $title, $publicated_at, $resume, $cover, $isbn, $author_id, $category_id, $created_at, $notation;
 
     // Champs issus de liaisons
     private $author, $category, $tags;
