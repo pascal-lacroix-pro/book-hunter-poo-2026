@@ -26,4 +26,11 @@ abstract class Helpers
 
         return $text;
     }
+
+    public static function truncate(string $text, int $chars = 100): string
+    {
+        if (strlen($text) <= $chars) return $text;
+        $text = substr($text, 0, $chars);
+        return rtrim(substr($text, 0, strrpos($text, ''))) . '…';
+    }
 }

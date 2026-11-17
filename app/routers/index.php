@@ -1,4 +1,8 @@
 <?php
 
+if (isset($_GET['authors'])):
+    include '../app/routers/authors.php';
 
-\App\Controllers\PagesController::homeAction();
+else:
+    \App\Controllers\PagesController::homeAction();
+endif;
