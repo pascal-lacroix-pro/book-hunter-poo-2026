@@ -2,7 +2,8 @@
     "name": "pascallacroix/book_hunter_poo_2026",
     "autoload": {
         "psr-4": {
-            "Core\\": "core/"
+            "Core\\": "core/",
+            "App\\Controllers\\": "app/controllers/"
         }
     },
     "authors": [
