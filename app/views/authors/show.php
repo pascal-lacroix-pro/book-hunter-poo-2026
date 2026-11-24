@@ -24,28 +24,7 @@
                 </span>
                 <span>9.0</span>
             </div>
-            <ul class="list-disc list-inside text-gray-300">
-                <li>
-                    <a
-                        href="book.html"
-                        class="hover:text-red-500 underline font-medium">L'Étranger</a>
-                </li>
-                <li>
-                    <a
-                        href="book.html"
-                        class="hover:text-red-500 underline font-medium">La Peste</a>
-                </li>
-                <li>
-                    <a
-                        href="book.html"
-                        class="hover:text-red-500 underline font-medium">Le Mythe de Sisyphe</a>
-                </li>
-                <li>
-                    <a
-                        href="book.html"
-                        class="hover:text-red-500 underline font-medium">La Chute</a>
-                </li>
-            </ul>
+            <?php include '../app/views/books/_indexByAuthor.php' ?>
         </div>
     </div>
 </div>

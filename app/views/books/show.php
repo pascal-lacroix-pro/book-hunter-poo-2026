@@ -14,7 +14,7 @@
             <p class="text-gray-300 mb-4">
                 Par
                 <a
-                    href="author.html"
+                    href="authors/<?php echo $book->author->id; ?>/<?php echo \Core\Helpers::slugify($book->author->firstname . ' ' . $book->author->lastname) ?>"
                     class="hover:text-red-500 underline font-medium">
                     <?php echo $book->author->firstname; ?>
                     <?php echo $book->author->lastname; ?>
