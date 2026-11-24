@@ -17,4 +17,13 @@ abstract class CategoriesManager
         $rs->execute();
         return $rs->fetchObject(Category::class);
     }
+
+    public static function findAll(): array
+    {
+        $sql = "SELECT *
+            FROM categories
+            ORDER BY name ASC;";
+        $rs = DB::getConnexion()->query($sql);
+        return $rs->fetchAll(PDO::FETCH_CLASS, Category::class);
+    }
 }

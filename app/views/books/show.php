@@ -30,7 +30,7 @@
             </div>
             <div class="flex flex-wrap">
                 <?php $tags = $book->tags;
-                include '../app/views/tags/_index.php';
+                include '../app/views/tags/_indexByBook.php';
                 ?>
             </div>
             <a
