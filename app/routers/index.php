@@ -1,6 +1,8 @@
 <?php
+if (isset($_GET['books'])):
+    include '../app/routers/books.php';
 
-if (isset($_GET['authors'])):
+elseif (isset($_GET['authors'])):
     include '../app/routers/authors.php';
 
 else:

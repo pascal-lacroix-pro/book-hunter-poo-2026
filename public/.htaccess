@@ -14,6 +14,11 @@ RewriteRule ^ - [L]
 # URL: ?authors=index
 RewriteRule ^authors$ ?authors=index [L]
 
+# ROUTE BOOKS.INDEX
+# PATTERN: /books
+# URL: ?books=index
+RewriteRule ^books$ ?books=index [L]
+
 
 # --------------------------------------------
 # FALLBACK

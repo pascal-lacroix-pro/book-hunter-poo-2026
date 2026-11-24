@@ -11,6 +11,9 @@ class Book
     // Champs issus de liaisons
     private $author, $category, $tags;
 
+    // GETTER MAGIIIIQUE: getter qui se lance quand on tente d'accéder à 
+    // - une propriété qui n'existe pas
+    // - une propriété private
     public function __get(string $property): mixed
     {
         $setterName = 'set' . ucfirst($property);

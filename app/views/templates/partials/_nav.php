@@ -43,7 +43,7 @@
                 <div class="hidden md:flex items-center">
                     <a
                         class="text-gray-300 hover:text-white px-3 py-2"
-                        href="books.html">Books</a>
+                        href="books">Books</a>
                     <a
                         class="text-gray-300 hover:text-white px-3 py-2"
                         href="authors">Authors</a>
