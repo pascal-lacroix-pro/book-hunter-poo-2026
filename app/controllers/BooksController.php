@@ -18,4 +18,15 @@ abstract class BooksController
         include '../app/views/books/index.php';
         $content = ob_get_clean();
     }
+
+    public static function showAction(int $id): void
+    {
+        $book = BooksManager::findOneById($id);
+
+        global $title, $content;
+        $title = $book->title;
+        ob_start();
+        include '../app/views/books/show.php';
+        $content = ob_get_clean();
+    }
 }

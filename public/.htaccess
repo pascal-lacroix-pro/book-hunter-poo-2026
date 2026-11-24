@@ -14,10 +14,20 @@ RewriteRule ^ - [L]
 # URL: ?authors=index
 RewriteRule ^authors$ ?authors=index [L]
 
+# ROUTE AUTHORS.SHOW
+# PATTERN: /authors/id/slug
+# URL: ?authors=show&id=x
+RewriteRule ^authors\/([1-9][0-9]*)\/[a-z0-9][a-z0-9\-]*$ ?authors=show&id=$1 [L]
+
 # ROUTE BOOKS.INDEX
 # PATTERN: /books
 # URL: ?books=index
 RewriteRule ^books$ ?books=index [L]
+
+# ROUTE BOOKS.SHOW
+# PATTERN: /books/id/slug
+# URL: ?books=show&id=x
+RewriteRule ^books\/([1-9][0-9]*)\/[a-z0-9][a-z0-9\-]*$ ?books=show&id=$1 [L]
 
 
 # --------------------------------------------

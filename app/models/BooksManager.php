@@ -20,4 +20,16 @@ abstract class BooksManager
         $rs->execute();
         return $rs->fetchAll(PDO::FETCH_CLASS, Book::class);
     }
+
+    public static function findOneById(int $id): Book
+    {
+        $sql = "SELECT b.*, ROUND(AVG(us.note), 2) AS notation
+                FROM books b
+                LEFT JOIN users_notations us ON us.book_id = b.id
+                WHERE b.id = :id;";
+        $rs = DB::getConnexion()->prepare($sql);
+        $rs->bindValue(':id', $id, PDO::PARAM_INT);
+        $rs->execute();
+        return $rs->fetchObject(Book::class);
+    }
 }

@@ -18,4 +18,15 @@ abstract class AuthorsController
         include '../app/views/authors/index.php';
         $content = ob_get_clean();
     }
+
+    public static function showAction(int $id): void
+    {
+        $author = AuthorsManager::findOneById($id);
+
+        global $title, $content;
+        $title = $author->firstname . ' ' . $author->lastname;
+        ob_start();
+        include '../app/views/authors/show.php';
+        $content = ob_get_clean();
+    }
 }
